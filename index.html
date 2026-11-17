@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de IMC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Controle de IMC</h1>
+
+    <form id="form-pessoa">
+      <div class="campo">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Ex: Francisco">
+      </div>
+
+      <div class="campo">
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" placeholder="Ex: 30">
+      </div>
+
+      <div class="campo">
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" step="0.01" placeholder="Ex: 1.70">
+      </div>
+
+      <div class="campo">
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" step="0.1" placeholder="Ex: 65">
+      </div>
+
+      <button type="submit">Salvar</button>
+    </form>
+
+    <!-- 10. Parágrafo de mensagem de erro -->
+    <p id="erro" class="mensagem-erro" hidden></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Altura</th>
+          <th>Peso</th>
+          <th>IMC</th>
+          <th>Classificação</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-pessoas">
+        <!-- Linhas geradas dinamicamente pelo JS -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
